@@ -1,18 +1,8 @@
 import Foundation
 
 func solution(_ dot:[Int]) -> Int {
-    let a: Int = dot[0]
-    let b: Int = dot[1]
-    
-    if a > 0 && b > 0 {
-        return 1
-    } else if a < 0 && b > 0 {
-        return 2
-    } else if a < 0 && b < 0 {
-        return 3
-    } else if a > 0 && b < 0 {
-        return 4
-    } else {
-        return 0
-    }
+      guard dot.count > 1 else { return 0 }
+    var x:Int = dot[0]
+    var y:Int = dot[1]
+    return x < 0 && y < 0 ? 3 : x < 0 ? 2 : y > 0 ? 1 : 4
 }
