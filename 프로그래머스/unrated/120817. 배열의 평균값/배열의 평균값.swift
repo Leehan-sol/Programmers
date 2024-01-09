@@ -1,10 +1,7 @@
 import Foundation
 
 func solution(_ numbers:[Int]) -> Double {
-    var sum = 0
-    for a in numbers {
-        sum += a
+ var a = Double(numbers.map{Int($0)}.reduce(0){$0 + $1}) / Double(numbers.count)
+   
+    return a
     }
-    var sumNumber = Double(sum) / Double(numbers.count)
-    return sumNumber
-}
