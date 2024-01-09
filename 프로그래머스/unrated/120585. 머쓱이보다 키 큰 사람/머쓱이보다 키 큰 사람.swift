@@ -1,11 +1,12 @@
 import Foundation
 
 func solution(_ array:[Int], _ height:Int) -> Int {
-   var taller = [Int]()
-    for r in array {
-        if r > height {
-            taller.append(r)
+   var taller = 0
+    
+    for i in array {
+        if i > height {
+            taller += 1
         }
     }
-      return taller.count
+    return taller
 }
