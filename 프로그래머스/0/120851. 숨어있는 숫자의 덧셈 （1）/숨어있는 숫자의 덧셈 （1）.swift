@@ -1,11 +1,7 @@
 import Foundation
 
 func solution(_ my_string:String) -> Int {
-    var num = [Int]()
-    for i in my_string {
-        if let intNum = Int(String(i)) {
-            num.append(intNum)
-        }
-    }
-    return num.reduce(0, +)
+    let num = my_string.filter { $0.isNumber }
+    let intNum = num.flatMap { Int(String($0)) }
+    return intNum.reduce(0, +)
 }
