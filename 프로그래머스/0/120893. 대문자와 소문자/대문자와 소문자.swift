@@ -1,14 +1,5 @@
 import Foundation
 
 func solution(_ my_string:String) -> String {
-    var result = ""
-    
-    for i in my_string {
-        if i.isLowercase {
-            result.append(i.uppercased())
-        } else {
-            result.append(i.lowercased())
-        }
-    }
-    return result
+   return my_string.map { $0.isLowercase ? String($0).uppercased() : String($0).lowercased() }.joined()
 }
