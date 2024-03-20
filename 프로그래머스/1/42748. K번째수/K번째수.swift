@@ -1,7 +1,7 @@
 import Foundation
 
 func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
-    var brray = [Int]()
+    var sortedArray = [Int]()
     var result = [Int]()
     
     for r in 0..<commands.count {
@@ -9,9 +9,9 @@ func solution(_ array:[Int], _ commands:[[Int]]) -> [Int] {
         var j = commands[r][1] - 1
         var k = commands[r][2] - 1  
         
-        brray = array[i...j].sorted()
+        sortedArray = array[i...j].sorted()
         
-        result.append(brray[k])  
+        result.append(sortedArray[k])  
     }
     
     return result
