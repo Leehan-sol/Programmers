@@ -4,6 +4,6 @@
 <br/>
 
 ## 사용 언어
-<img src="https://github.com/Leehan-sol/Programmers/assets/139109343/3071de36-7754-4795-822e-2e9fe4fc5bd0" width="30" height="30"> **Swift**
+<img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=Swift&logoColor=white"> 
 
 
