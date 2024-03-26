@@ -1,14 +1,13 @@
 import Foundation
 
 func solution(_ sizes:[[Int]]) -> Int {
-    var a = [Int]()
-    var b = [Int]()
+    var left = [Int]()
+    var right = [Int]()
     
-    for size in sizes {
-        a.append(size.max() ?? 0)
-        b.append(size.min() ?? 0)
+    for i in sizes {
+        left.append(i.max() ?? 0)
+        right.append(i.min() ?? 0)
     }
-    
-    
-    return (a.max() ?? 0) * (b.max() ?? 0)
+
+    return (left.max() ?? 0) * (right.max() ?? 0)
 }
