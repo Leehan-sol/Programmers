@@ -1,8 +1,16 @@
 import Foundation
 
 func solution(_ numbers:[Int], _ direction:String) -> [Int] {
-    var num = numbers
-    direction == "right" ? num.insert(num.removeLast(), at: 0) : num.append(num.removeFirst())
+
+    var res = numbers
+    var temp = 0
     
-    return num
+    if direction == "left" {
+        temp = res.removeFirst()
+        res.append(temp)
+    } else {
+        temp = res.removeLast()
+        res.insert(temp, at:0)
+    }
+    return res
 }
