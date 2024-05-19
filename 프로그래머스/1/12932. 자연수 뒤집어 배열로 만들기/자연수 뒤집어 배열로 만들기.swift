@@ -1,9 +1,8 @@
+import Foundation
+
 func solution(_ n:Int64) -> [Int] {
-    var result = [Int]()
+    let arr = Array(String(n))
+    let IntArr = arr.compactMap { Int(String($0)) }
     
-    for i in String(n) {
-        result.insert(Int(String(i))!, at:0)
-    }
-    
-    return result
+    return IntArr.reversed()
 }
