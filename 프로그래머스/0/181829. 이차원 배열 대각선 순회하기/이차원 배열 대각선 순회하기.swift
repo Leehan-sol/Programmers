@@ -1,14 +1,12 @@
 import Foundation
 
 func solution(_ board:[[Int]], _ k:Int) -> Int {
-    var num = [Int]()
+    var result = 0 
     
-    for (outer, out) in board.enumerated() {
-        for (inner, inn) in out.enumerated() {
-            if outer + inner <= k {
-                num.append(inn)
-            }
+    for i in 0..<board.count {
+        for j in 0..<board[i].count where i + j <= k {
+            result += board[i][j]
         }
     }
-    return num.reduce(0, +)
+    return result
 }
