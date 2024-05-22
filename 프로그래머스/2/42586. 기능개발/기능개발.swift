@@ -5,8 +5,8 @@ func solution(_ progresses:[Int], _ speeds:[Int]) -> [Int] {
     var countArr = [Int]()
     
     for i in 0..<progresses.count {
-        let remain = divide(num1: progresses[i], num2: speeds[i])
-        queue.append(remain)
+        let remainDay = divide(num1: progresses[i], num2: speeds[i])
+        queue.append(remainDay)
     }
     
     var currentDay = queue[0]
