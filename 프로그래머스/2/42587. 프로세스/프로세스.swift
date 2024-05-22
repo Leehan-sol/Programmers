@@ -12,7 +12,6 @@ func solution(_ priorities:[Int], _ location:Int) -> Int {
                 if i.0 == location {
                     return count
                 }
-                 
             } else {
                 queue.append(i)
                 queue.removeFirst()
