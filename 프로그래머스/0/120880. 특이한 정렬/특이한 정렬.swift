@@ -1,9 +1,11 @@
 import Foundation
 
 func solution(_ numList: [Int], _ n: Int) -> [Int] {
-    numList.sorted { 
-    let a = abs($0 - n)
-    let b = abs($1 - n)
+    var temp = [(Int, Int)]()
     
-    return a == b ? $0 > $1 : a < b }
+    for i in 0..<numList.count {
+        temp.append((abs(n-numList[i]), numList[i]))
+    }
+    
+    return temp.sorted{ $0.0 != $1.0 ? $0.0 < $1.0 : $0.1 > $1.1 }.flatMap { $0.1 }
 }
