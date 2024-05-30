@@ -1,7 +1,8 @@
 import Foundation
 
 func solution(_ myString:String) -> [String] {
-    let separatedStr = myString.components(separatedBy: "x")
-    let filterStr = separatedStr.filter { $0 != "" }
-    return filterStr.sorted()
+    let str = myString.split(separator:"x")
+    let result = Array(str).map { String($0) }.sorted()
+
+    return result
 }
